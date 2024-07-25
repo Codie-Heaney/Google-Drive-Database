@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Project 01</title>
+    <link rel="stylesheet" href="/static/WCFP_web2/wcfpdesign2.css">
+    <link @import url"https://fonts.googleapis.com/css?family=Inter:400,300,600">
+    <script src="/static/WCFP_web2/funcs.js"></script>
+    <script src="/static/WCFP_web2/cookieLib.js"></script>
+    <script>
+        let loginCookie = getCookie("loggedin");
+        if(loginCookie != 1){
+            document.location.href = "/orglogin"
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="/add_entry" method="POST"> <!--insert php page-->
+
+            <div class="user-details">
+
+                <img class="wcfplogo-1" src="/static/WCFP_web2/images/wcfplogo-removebg-preview.png" alt="wcfplogo 1" />
+                <h1 class="title">REFERRAL FORM</h1>
+
+                <div class="main" id="section1">
+                    <h2>Personal Details</h2>
+                    <br>
+
+                    <input type="text" id="fname" class="type-1" name="fname" placeholder="First Name" required>
+
+
+                    <input type="text" id="lname" class="type-1" name="lname" placeholder="Last Name" required>
+
+
+                    <input type="text" id="addy" class="type-1" name="addy" placeholder="Address" required><br>
+
+                    <input type="email" id="pemail" class="type-1" name="pemail" placeholder="Email">
+
+                    <input type="text" id="pcode" class="type-1" name="pcode" placeholder="PostCode" required>
+
+                    <input type="tel" id="phone" class="type-1" name="phone" placeholder="+44 0123456789" pattern="{9}"><br>
+                    <div class = "reasonbtn">
+                        <select id="gender" name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </div></select><br><br>
+
+                        <button onclick="change()"> <a href="#section2" class="next round">&#8250; </a></button>
+
+                   
+                    
+                </div>
+                <br>
+
+                <div class="main" id="section2">
+                    <h2>Living Situation</h2>
+
+                    <input type="checkbox" id="house1" name="house1" value="Housing Association Tenant">
+                    <label for="house1"> Housing Association Tenant</label><br><br>
+                    <input type="checkbox" id="house2" name="house2" value="Private Tenant">
+                    <label for="house2"> Private Tenant</label><br><br>
+                    <input type="checkbox" id="house3" name="house3" value="Owner/Occupier">
+                    <label for="house3"> Owner/Occupier</label><br><br>
+                    <input type="checkbox" id="house4" name="house4" value="Homeless">
+                    <label for="house4"> Homeless</label><br><br>
+                    <input type="checkbox" id="house5" name="house5" value="Living with Sponsor">
+                    <label for="house5"> Living with Sponsor</label><br><br>
+                    <input type="checkbox" id="house6" name="house6" value="Living with Friends/Family">
+                    <label for="house6"> Living with Friends/Family</label><br><br>
+
+
+                    <a href="#section1" class="previous round">&#8249;</a>
+                    <a href="#section3" class="next round">&#8250;</a>
+                </div>
+
+
+
+<!--
+                <script type="text/javascript">
+                    function EnableDisableTextBox(support) {
+                        var selectedValue = support.options[support.selectedIndex].value;
+                        var txtOther = document.getElementById("txtOther");
+                        txtOther.disabled = selectedValue == 16 ? false : true;
+                        if (!txtOther.disabled) {
+                            txtOther.focus();
+                        }
+
+                    }
+   -->
+                                                                   
+
+                </script>
+
+            
+
+            <div class="main" id="section3">
+
+                <h2>Financial Situation</h2>
+                <span>Choose your main reason for Support:</span>
+                <div class = "reasonbtn">
+                <select id="support" onchange="EnableDisableTextBox(this)" name="support">
+                    <option value="1">Bereavement</option>
+                    <option value="2">Family Changes</option>
+                    <option value="3">Sickness</option>
+                    <option value="4">Fleeing Domestic Violence</option>
+                    <option value="5">School Holidays</option>
+                    <option value="6">Debt</option>
+                    <option value="7">Loan Shark</option>
+                    <option value="8">Working fewer hours</option>
+                    <option value="9">Delay in Wages</option>
+                    <option value="10">Unemployed and no benefit yet</option>
+                    <option value="11">Delay in benefit</option>
+                    <option value="12">Change in benefit</option>
+                    <option value="13">Sanctioned benfit</option>
+                    <option value="14">Refugee/ Asylum seeker</option>
+                    <option value="15">Not able to meet increased cost of living</option>
+                    <option value="16">Other</option>
+               </div> </select>
+                <br />
+
+
+                Other:
+                <input type="text" id="txtOther" disabled="disabled" name="supportother"/>
+                <br>
+
+                <br> <label for="expend"> One off loss or expenditure, if yes, specify:</label><br>
+                <select id="expend" onchange="EnableDisableTextBox(this)" name="expendoption">
+                    <option value="1">No</option>
+                    <option value="2">Yes</option>
+
+                    <input type="text" id="txtYes" name="expenditure"/><br><br>
+
+                </select>
+
+
+                <label>How many weeks is support needed for?</label>
+                <input type="number" id="weeks" min="1" max="52" name="weeks">
+                <br><br>
+
+                <a href="#section2" class="previous round">&#8249;</a>
+                <a href="#section4" class="next round">&#8250;</a>
+            </div>
+
+            <div class="main" id="section4">
+
+
+                <div class="adult-class">
+                    <h3>PARCEL INFORMATION</h3>
+
+                    <span>How many people (in each age range) is the parcel for?</span> <br>
+                    <br>
+
+                    <h4>Adults</h4>
+
+                    <label for="AD1">*18-25 </label>
+                    <input type="number" onblur = "findTotal()" class="type-1" id="AD1" name="qty" value="0" min="0"><br><br>
+
+                    <label for="AD2">26-50</label>
+                    <input type="number" onblur = "findTotal()" class="type-1" id="AD2" name="qty" value="0" min="0"><br><br>
+
+                    <label for="AD3">51-69</label>
+                    <input type="number" onblur = "findTotal()" class="type-1" id="AD3" name="qty" value="0" min="0"><br><br>
+
+                    <label for="AD4">70+</label>
+                    <input type="number" onblur = "findTotal()"class="type-1" id="AD4" name="qty" value="0" min="0"><br><br>
+                </div>
+                <div class="child-class">
+                    <h4>Children</h4>
+                    <label for="C1">0-2 </label>
+                    <input type="number" onblur = "findTotal()"class="type-1" id="C1" name="qty" value="0" min="0"><br><br>
+
+                    <label for="C2">3-10</label>
+                    <input type="number"onblur = "findTotal()" class="type-1" id="C2" name="qty" value="0" min="0"><br><br>
+
+                    <label for="C3">11-17</label>
+                    <input type="number" onblur = "findTotal()"class="type-1" id="C3" name="qty" value="0" min="0"><br><br>
+                </div>
+
+                Total: <input type="number" name="total" id="total" readonly/>
+                <br>
+                <h6>*18-25 year olds not in full time education must claim their own right</h6>
+
+                <a href="#section3" class="previous round">&#8249;</a>
+                <a href="#section5" class="next round">&#8250;</a>
+            </div>
+
+            <div class="main" id="section5">
+                <h3>REFEREE DETAILS</h3>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" class="type-1" id="fullname" name="fullname" required>
+
+                <label for="org">Organisation: </label>
+                <input type="text" class="type-1" id="org" name="org" required><br><br>
+
+                <label for="date">Date:</label>
+                <input type="date" class="type-1" id="date" name="date" required>
+
+                <label for="email">Email: </label>
+                <input type="email" class="type-1" id="email" name="email" required><br><br>
+
+                <label for="phone">Contact Number:</label>
+                <input type="tel" class="type-1" id="phone" name="refphone" placeholder="+44 0123456789"
+                    pattern="{9}"><br><br>
+
+                <input type="checkbox" id="declare" name="declare" value="claimant " required>
+                <label for="declare"> I have no way of confirming the claimant's situation </label><br>
+            </div>
+            <p>
+                Data Protection:
+                I
+                ..........................................................................................................give
+                my
+
+                written consent for the Washington Community Food Project to retain my personal details for the
+
+                purpose of collating statistical analysis and will not be shared with other agencies/organisations
+
+                without my further written consent and that after a period of 3 years my information will be
+
+                destroyed by W.C.F.P.
+
+                Signature
+                [upon receipt of parcel]........................................................ Date
+                .......................
+            </p>
+            <a href="#section4" class="previous round">&#8249;</a>
+
+            <input type="submit" value="Submit" id="submit" onclick = "numcheck">
+       </div> 
+    </form>
+
+      </div>
+
+
+    </body>
+</html>

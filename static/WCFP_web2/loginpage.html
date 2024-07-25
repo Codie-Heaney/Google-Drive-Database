@@ -1,0 +1,55 @@
+<!--Use this page to make a form to log users in-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Project 01</title>
+    <link rel="stylesheet" href="/static/WCFP_web2/wcfpdesign2.css">
+    <link @import url"https://fonts.googleapis.com/css?family=Inter:400,300,600">
+    <script src="/static/WCFP_web2/funcs.js"></script>
+    <script src="/static/WCFP_web2/cookieLib.js"></script>
+
+</head>
+
+
+<body class="secondclass">
+  <div class="form-box">
+    <div class="label-box">
+      <div id="lbl"> 
+      <h1>Log in</h1>
+      <img src="/static/WCFP_web2/images/Login-bro.png" class="img-fluid" alt="">
+</div>
+    </div>
+    <div class="Loginform">
+
+      <form id="log-in" class="input group" action="/checklogin" method="POST">
+        
+
+        <div>
+             <input type="text" class="input-field" placeholder="Enter Username" name="uname" id="uname" required>
+
+        <input type="password" class="input-field" placeholder="Enter Password" name="psw" id="psw" required>
+       
+        </div>
+       
+
+        <a href="">
+        <div class="submitbtnmain">
+          <button onclick="onSubmit();" type="submit" id= "submit" class="Submit-btn">Login</button>
+          </a>
+            
+        </div>
+
+      </form>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+<script src="/static/WCFP_web2/loginpageCookie.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Database</title>
+    </head>
+    <body>
+        <h1>Search for Clients</h1>
+        Terms to search for: 
+        <div id="clientTermDiv">
+            ClientID:<input type="checkbox" id="clientIDCB" onclick="showDiv(this, 0)"><br>
+            First Name:<input type="checkbox" id="firstNameCB" onclick="showDiv(this, 1)"><br>
+            Last Name:<input type="checkbox" id="lastNameCB" onclick="showDiv(this, 2)"><br>
+            Address:<input type="checkbox" id="addressCB" onclick="showDiv(this, 3)"><br>
+            Postcode:<input type="checkbox" id="postcodeCB" onclick="showDiv(this, 4)"><br>
+            Phone Number:<input type="checkbox" id="phoneCB" onclick="showDiv(this, 5)"><br>
+            Email:<input type="checkbox" id="emailCB" onclick="showDiv(this, 6)"><br>
+            Gender:<input type="checkbox" id="genderCB" onclick="showDiv(this, 7)"><br>
+            Aggressive:<input type="checkbox" id="aggressiveCB" onclick="showDiv(this, 8)"><br>
+        <hr>
+        <h3 id="termsTitle" style="display:none;">Enter terms to search through database</h3>
+       <form action = "/search_for_client" method = "POST">
+            <div id="clientDiv" style="display:none;">Client ID: <input type = "text" name = "clientID"> <br><p></p></div>
+            <div id="firstNameDiv" style="display:none;">First Name: <input type = "text" name = "firstName"><br><p></p></div>
+            <div id="lastNameDiv" style="display:none;">Last Name: <input type = "text" name = "lastName"> <br><p></p></div>
+            <div id="addressDiv" style="display:none;">Address: <input type = "text" name = "address"><br><p></p></div>
+            <div id="postcodeDiv" style="display:none;">Postcode: <input type = "text" name = "postcode"><br><p></p></div>
+            <div id="phoneDiv" style="display:none;">Phone Number: <input type = "text" name = "phone"><br><p></p></div>
+            <div id="emailDiv" style="display:none;">Email: <input type = "text" name = "email"><br><p></p></div>
+            <div id="genderDiv" style="display:none;">Gender: <select name="gender">
+                <option></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-binary">Non-binary</option>
+                <option value="Other">Other</option>
+            </select><br><p></p></div>
+            <div id="aggressiveDiv" style="display:none;">Aggressive: Yes: <input type = "checkbox" name="aggressiveyes" id="aggressiveyes" onclick="switchAggressive('aggressiveno')">No: <input type = "checkbox" name="aggressiveno" id="aggressiveno" onclick="switchAggressive('aggressiveyes')"><br><p></p></div>
+            <div id="submitDiv" style="display:none;"><button type = "submit" value = "Submit">Submit</button></div>
+       </form><p></p><hr>
+       <form action ="/search_for_client" method = "POST" style = "display: none;">
+            <b>Show All</b><input type = "checkbox" name="showAll">
+            <button type = "submit">Submit</button>
+       </form>
+       <script src="/static/js/client.js"></script>
+    </body>
+</html>

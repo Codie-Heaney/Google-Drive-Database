@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View All Referrals</title>
+        <script src="/static/WCFP_web2/cookieLib.js"></script>
+    <script>
+        let loginCookie = getCookie("loggedin");
+        if(loginCookie != 1){
+            document.location.href = "/orglogin"
+        }
+    </script>
+    </head>
+    <body>
+        <h1>View Database Form</h1><p></p>
+        <h3>Select each table you'd like to view</h3><p></p>
+        <form action="/showtable" method="POST">
+            <input type="checkbox" name="client">
+            <label for="client">Client Table</label><br>
+            <input type="checkbox" name="referral">
+            <label for="referral">Referral Table</label><br>
+            <input type="checkbox" name="parcel">
+            <label for="parcel">Parcel Table</label><br>
+            <input type="checkbox" name="location">
+            <label for="location">Location Table</label><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

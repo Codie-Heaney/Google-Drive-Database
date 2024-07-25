@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Viewing Table</title>
+        <script src="/static/WCFP_web2/cookieLib.js"></script>
+    <script>
+        let loginCookie = getCookie("loggedin");
+        if(loginCookie != 1){
+            document.location.href = "/orglogin"
+        }
+    </script>
+    </head>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        #aggressive{
+            background-color: rgb(255, 150, 150);
+        }
+    </style>
+    <body>
+        <table id="tableID" style="width:100%"></table><p></p>
+        <form action="/mainpage" method="GET">
+            <button type="submit">Back</button>
+        </form>
+        <script src = "static/WCFP_web2/showtable.js"></script>
+    </body>
+</html>

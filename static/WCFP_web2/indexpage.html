@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Project 01</title>
+    <link rel="stylesheet" href="/static/WCFP_web2/Designpage.css">
+    <title>Admin Panel</title>
+    <script src="/static/WCFP_web2/cookieLib.js"></script>
+    <script>
+        let loginCookie = getCookie("loggedin");
+        if(loginCookie != 1){
+            document.location.href = "/orglogin"
+        }
+    </script>
+</head>
+
+<body class="thirdclass">
+    
+    <!--<nav>
+            <div class="wrapper">
+                <a href="index.php"></a>
+                <li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href= "login.php">Log in</a></li>
+                <li><a href="logout.php">Log out</a></li>
+            </div>
+        </nav>
+    -->
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <img class="wcfplogo-1" src="/static/WCFP_web2/images/wcfplogo-removebg-preview.png" alt="wcfplogo 1" />
+                </li>
+                <li>
+                    <a href="/mainpage">
+                        <img src="/static/WCFP_web2/images/home (4).png" />
+                        <div class="title"> Home </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/orglogin">
+                        <img src="/static/WCFP_web2/images/user.png" />
+
+                        <div class="title"> Login </div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <img src="/static/WCFP_web2/images/settings.png" />
+
+                        <div class="title">Settings </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <button type="logout" class="submit-btn2" name="logout_btn" onclick="setCookie('loggedin', 0);setCookie('username', '');window.location.href='/orglogin';">
+                            Log out </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="top-bar">
+                <div class="search">
+                    <input type="text" name="search" placeholder="Search here">
+                    <label for="search"> <img src="/static/WCFP_web2/images/loupe.png" /></label>
+
+                </div>
+
+                <div class="user">
+                    <img src="/static/WCFP_web2/images/loginavatar.jpg" />
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number" id="reportNum"></div>
+                        <div class="card-name">Reports</div>
+                    </div>
+                    <div class="icon-box">
+                        <img src="/static/WCFP_web2/images/user (1).png" />
+                    </div>
+                </div>
+
+
+                
+
+
+                <div class="card">
+                    <a href="/refform">
+                        <div class="card-content">
+                        <div class="number">+</div>
+                        <div class="card-name">Refer New Client</div>
+                    </div>
+                    </a>
+                    
+                
+                </div>
+            </div>
+
+
+            <div class="tables">
+                <div class="referrals">
+                    <div class="heading">
+                        <h2>REFERRALS</h2>
+                        <a href="/viewentry" class="fbtn">View All</a>
+                    </div>
+                    <table class="referralstb" id="referralTable">
+                        <thead>
+                            <td>ID</td>
+                            <td>First Name</td>
+                            <td>Surname</td>
+                            <td>Housing Status</td>
+                            <td>Allocated Parcels</td>
+                            <td>Date of First Delivery</td>
+                            <td>Reason </td>
+                            <td>Total People</td>
+                            <td>Referee </td>
+                            <td>Aggressive</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/WCFP_web2/mainpagereferralstable.js"></script>
+</body>
+
+
+
+</html>

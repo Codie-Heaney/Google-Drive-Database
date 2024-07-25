@@ -1,0 +1,367 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: linear-gradient(to right,#DFEEF6 , #3A7CA5);
+}
+
+
+.hero{
+  height:100vh;
+  width: 100%;
+  background-image: url(.../images/background3.jpg); /*image im using*/
+  background-position: center;/*centre the image*/
+  background-size: cover;/*resize the background image to cover the entire container*/
+  background-color: #A9BCD0;/*incase the image is unavailable*/
+}
+
+.form-box{
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin:  auto;
+  background: #fff ;
+  padding: 5px;
+  top: 12%;
+}
+
+.label-box{
+  width: 380px;
+  margin: 10px;
+  position :relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px ;
+  display: flex;
+
+}
+.toggle-btn{
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none ;
+  position: relative;
+}
+
+#lbl{
+  top:0;
+  left: 0;
+  position: absolute;
+  width:110px;
+  height: 100%;
+  border-radius: 30px;
+  
+
+}
+
+
+
+
+.input-field{
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn{
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin:auto;
+  background: linear-gradient(to right, #1a9721,#aab4a1);
+  border:0;
+  outline: none;
+  border-radius: 30px;
+
+}
+
+.submitbtnmain {
+  display: flex;
+
+}
+
+
+span{
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+
+.thirdclass{
+  overflow-x : hidden;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.sidebar{
+  position: fixed;
+  width: 180px ;
+  height: 100% ;
+  background-color: #a9d0ae;
+  overflow-x: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+
+
+.sidebar ul li {
+  width: 100%;
+  list-style: none ;
+  
+}
+
+
+.sidebar ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a img {
+  min-width: 60px;
+  font-size: 24px;
+  text-align: center;
+  padding: 30px;
+}
+
+.sidebar ul li  .wcfplogo-1{
+  padding-right: 25px;
+}
+
+.submit-btn2{
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin:auto;
+  background-color: rgb(255, 0, 0);
+  border:0;
+  outline: none;
+  border-radius: 30px;
+
+}
+.top-bar{
+  position: fixed;
+  height: 60px;
+  width: calc(100% - 300px);
+  background: #fff;
+  display:grid;
+  grid-template-columns: 10fr 0.4fr 1fr;
+  grid-gap: 5px;
+  align-items: center;
+  color: #444;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+}
+
+.top-bar .search{
+  position: relative;
+  max-width: 45%;
+}
+
+.search input{
+  width: 100%;
+  min-width: 128px;
+  height: 40px;
+  padding: 0 40px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  background: #f5f5f5;
+}
+
+.search img {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+
+}
+
+.sidebar .title {
+  padding: 10px;
+  font-size: 20px ;
+}
+
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  min-height: 100vh;
+  left: 290px;
+  background-color: #f5f5f5;
+}
+
+.user{
+  position: relative;
+  width: 50px;
+  height: 50px;
+
+}
+
+.user img{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top: 0;
+  left:0;
+  object-fit: cover;
+}
+
+.cards{
+  
+  margin-top: 60px;
+  width: 100%;
+  padding: 35px 40px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px
+
+}
+.cards .card{
+  background: #80d18d;
+  padding: 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.number{
+  font-size: 35px ;
+  font-weight: 500;
+  color: #fff
+}
+
+.tables{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  align-items: self-start;
+  padding: 0 20px 20px 20px;
+  
+}
+
+.actionicons{
+  display: flex;
+  
+}
+.actionbtns{
+  border: none;
+  padding: 12px 16px;
+  outline: none;
+  background: transparent;
+}
+
+.referrals{
+  min-height: 350px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) ;
+  width:25cm;
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #444;
+}
+
+.fbtn{
+  padding: 5px 10px;
+  background: linear-gradient(  #1a9721,#aab4a1);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.wcfplogo-1{
+  height: 150px;
+object-fit: contain;
+width: 205px;
+backface-visibility: hidden;
+}
+
+table{
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead td{
+  font-weight: 600;
+  color: #333;
+}
+
+table tr{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:hover{
+  background:#F6F4F5;
+  color:#444 ;
+}
+
+table tbody tr:last-child{
+  border-bottom:none;
+}
+
+td{
+  padding: 9px 5px;
+}
+td img{
+  padding: 7px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+
+.reportfault{
+ 
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin:  auto;
+  background: #fff ;
+  padding: 5px;
+  top: 12%;
+    
+  
+}
+
+.reportfault inputfield{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box
+}
+
+.fourthbody{
+  background-color: #999;
+  display: flex;
+}
+
+.fifthbody{
+  display:flexbox;
+  
+}
+
